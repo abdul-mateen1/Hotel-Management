@@ -130,10 +130,10 @@ export function GooeyInput({
       <GooeyFilter filterId={filterId} blur={gooeyBlur} />
 
       <div
-        className={cn("relative flex h-10 items-center justify-center", classNames?.filterWrap)}
+        className={cn("relative flex h-10  items-center justify-center", classNames?.filterWrap)}
         style={{ filter: `url(#${filterId})` }}>
         <motion.div
-          className={cn("flex h-10 items-center justify-center", classNames?.buttonRow)}
+          className={cn("flex h-10 items-center justify-center ", classNames?.buttonRow)}
           variants={buttonVariants}
           initial="collapsed"
           animate={isExpanded ? "expanded" : "collapsed"}
@@ -143,7 +143,7 @@ export function GooeyInput({
             disabled={disabled}
             onClick={handleExpand}
             className={cn(
-              "flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-full px-4 text-sm font-medium outline-none transition-[color,box-shadow] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
+              "flex h-10 w-full cursor-pointer items-center justify-center gap-2  rounded-full px-4 text-sm font-medium outline-none transition-[color,box-shadow] focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50",
               surfaceClass,
               classNames?.trigger
             )}>

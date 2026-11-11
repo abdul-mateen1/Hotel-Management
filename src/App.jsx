@@ -1,17 +1,39 @@
-import { useState } from 'react'
-import { GooeyInput } from '@/components/ui/gooey-input';
-import './App.css'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useState } from 'react';
+import './App.css';
+import { Outlet } from "react-router-dom";
+import MainLayout from './layout/MainLayout';
+import HomePage from '@/components/public/HomePage';
+import Login from '@/components/public/Login';
+
+import DashboardLayout from './layout/DashboardLayout';
+
+const ProtectedRoute = () => {
+  const token = localStorage.getItem("token");
+  return token ? <Outlet /> : <Navigate to="/staff/login" replace />;
+};
 
 export default function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-100">
-      <h1 className="text-4xl font-bold text-blue-600 underline">
-        Tailwind works!
-      </h1>
-      <div className="flex h-40 w-full items-center justify-center">
-      <GooeyInput placeholder="Search..." />
-    </div>
+    <BrowserRouter>
 
-    </div>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+
+        <Route path="/staff/login" element={<Login />} />
+
+        <Route element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            {/* <Route path="/" element={<HomePage />} /> */}
+          </Route>
+        </Route>
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+
+      </Routes>
+
+    </BrowserRouter>
   )
 }
