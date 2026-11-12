@@ -9,7 +9,7 @@ export default function HomePage() {
             <div className="relative overflow-hidden w-full h-full py-20">
                 <Carousel slides={slideData} />
             </div>
-            <PricingSection />
+            <PricingSection  />
 
         </>
     );

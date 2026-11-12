@@ -8,13 +8,13 @@ import Footer from '@/components/common/Footer';
 export default function MainLayout() {
 
     return (
-        <div className=" min-h-screen flex flex-col bg-gray-600">
+        <div className=" min-h-screen flex flex-col bg-gray-700">
 
             <header className="w-full">
-                <div className="w-full container mx-auto flex flex-col md:flex-row items-center justify-between p-20 gap-4 bg-gray-700">
+                <div className="w-full container mx-auto flex flex-col md:flex-row items-center justify-between p-20 gap-4 bg-gray-900">
                     <LayoutTextFlip/>
                     <Navbar/>
-                    <GooeyInput placeholder="Search..." />
+                    <GooeyInput placeholder="Search..."  />
                 </div>
             </header>
 

@@ -1,14 +1,13 @@
 export default function PricingSection() {
+    const handleSingleRoom = () => {
+
+    }
     return (
         <section id="pricing" className="w-full text-gray-400 bg-gray-900 body-font overflow-hidden">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-col text-center w-full mb-20">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">Pricing</h1>
-                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.</p>
-                    {/* <div className="flex mx-auto border-2 border-orange-500 rounded overflow-hidden mt-6">
-                            <button className="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Monthly</button>
-                            <button className="py-1 px-4 text-gray-300 focus:outline-none">Annually</button>
-                        </div> */}
+                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Forget your Budget and focus.</p>
                 </div>
                 <div className="flex flex-wrap justify-center -m-4">
                     <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
@@ -24,35 +23,35 @@ export default function PricingSection() {
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Vexillologist pitchfork
+                                </span>1 Single Bed
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Tumeric plaid portland
+                                </span>Free Wi-Fi
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Hexagon neutra unicorn
+                                </span>Air Conditioning
                             </p>
                             <p className="flex items-center text-gray-400 mb-6">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Mixtape chillwave tumeric
+                                </span>Private Bathroom
                             </p>
-                            <button className="flex items-center mt-auto text-white bg-orange-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-400 rounded">Button
+                            <button className="flex items-center mt-auto text-white bg-orange-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-400 rounded">Book Now
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
                             </button>
-                            <p className="text-xs text-gray-400 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+                            <p className="text-xs text-gray-400 mt-3">*Terms and conditions applied.</p>
                         </div>
                     </div>
                     <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
@@ -67,42 +66,42 @@ export default function PricingSection() {
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Vexillologist pitchfork
+                                </span>2 Single Beds or 1 Double Bed
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Tumeric plaid portland
+                                </span>Free Wi-Fi
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Hexagon neutra unicorn
+                                </span>Air Conditioning
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Vexillologist pitchfork
+                                </span>Flat-Screen TV
                             </p>
                             <p className="flex items-center text-gray-400 mb-6">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Mixtape chillwave tumeric
+                                </span>Wardrobe
                             </p>
-                            <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Button
+                            <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Book Now
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
                             </button>
-                            <p className="text-xs text-gray-400 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+                            <p className="text-xs text-gray-400 mt-3">*Terms and conditions applied.</p>
                         </div>
                     </div>
                     <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
@@ -117,42 +116,42 @@ export default function PricingSection() {
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Vexillologist pitchfork
+                                </span>1 King-Size Bed
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Tumeric plaid portland
+                                </span>Spacious Interior
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Hexagon neutra unicorn
+                                </span>Smart TV
                             </p>
                             <p className="flex items-center text-gray-400 mb-2">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Vexillologist pitchfork
+                                </span>Mini Refrigerator
                             </p>
                             <p className="flex items-center text-gray-400 mb-6">
                                 <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" className="w-3 h-3" viewBox="0 0 24 24">
                                         <path d="M20 6L9 17l-5-5"></path>
                                     </svg>
-                                </span>Mixtape chillwave tumeric
+                                </span>Premium Bathroom Amenities
                             </p>
-                            <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Button
+                            <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Book Now
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
                             </button>
-                            <p className="text-xs text-gray-400 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+                            <p className="text-xs text-gray-400 mt-3">*Terms and conditions applied.</p>
                         </div>
                     </div>
                 </div>

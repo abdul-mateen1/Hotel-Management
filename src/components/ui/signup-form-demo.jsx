@@ -3,16 +3,46 @@ import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
+import { useState } from 'react';
+import { loginUser } from '@/services/authService';
 
 export default function SignupFormDemo() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted");
+  };
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const credentials = {
+    email: email,
+    password: password
+  }
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError('');
+    try {
+      const data = await loginUser(credentials);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("role", data.roleId);
+
+    }
+    catch (error) {
+
+      setError(error.message);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setError("Enter a valid Email address.")
+      }
+      if (!password) {
+        setError("Password is required.")
+      } else if (password.length < 6) {
+        setError("Password must be at least 6 characters.")
+      }
+    }
   };
   return (
     <div className="shadow-input mx-auto w-full max-w-md rounded-none text-white  p-4 md:rounded-2xl md:p-8 dark:bg-black">
@@ -21,45 +51,40 @@ export default function SignupFormDemo() {
       </h2>
       <p className="mt-2 max-w-sm text-sm text-neutral-800 dark:white ">
         Login to start your Day
-      </p>
+      </p> <span className="text-xs text-red-500">(For admin and staff only)</span>
 
-      <form className="my-6 text-white" onSubmit={handleSubmit}>
-        <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" required/>
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" required />
-          </LabelInputContainer>
-        </div>
-
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="phone">Phone</Label>
-          <Input id="phone" placeholder="11-digit Phone No" type="text" required/>
-        </LabelInputContainer>
-
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="cnic">CNIC</Label>
-          <Input id="cnic" placeholder="XXXXX-XXXXXXX-X" type="text" required/>
-        </LabelInputContainer>
+      <form className="my-6 text-white" onSubmit={handleLogin}>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" required />
+          <Input
+            id="email"
+            placeholder="projectmayhem@fc.com"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required />
         </LabelInputContainer>
 
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="address">Address</Label>
-          <Input id="address" placeholder="123 Main St, Apt 4B" type="text" required />
-        </LabelInputContainer>
-        
         <LabelInputContainer className="mb-4">
           <Label htmlFor="password">Password</Label>
-          <Input id="password" placeholder="••••••••" type="password" required/>
+          <Input
+            id="password"
+            placeholder="••••••••"
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required />
         </LabelInputContainer>
 
+        <input
+          type="checkbox"
+          checked={showPassword}
+          onChange={(e) => setShowPassword(e.target.checked)} />
+        <span className="text-sm text-black"> Show Password</span>
+
+
+        <div className="text-pink-600">{error && <p className="text-sm ">{error}</p>}</div>
 
         <button
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"

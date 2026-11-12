@@ -37,47 +37,33 @@ export const slideData = [
 export const NavLinks = [
     {
         title: "Home",
-        icon: (
-            <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-        ),
+        icon: <IconHome />,
+        type: "route",
         href: "/",
     },
-
     {
         title: "Products",
-        icon: (
-            <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-        ),
-        href: "",
+        icon: <IconTerminal2 />,
+        type: "section",
+        targetId: "products",
     },
     {
         title: "Pricing",
-        icon: (
-            <IconCurrencyDollar className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-        ),
-        href: "/pricing",
+        icon: <IconCurrencyDollar />,
+        type: "section",
+        targetId: "pricing",
     },
-    // {
-    //     title: "Changelog",
-    //     icon: (
-    //         <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    //     ),
-    //     href: "#",
-    // },
-
     {
         title: "Theme",
-        icon: (
-            <IconSun className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-        ),
-        href: "#",
+        icon: <IconSun />,
+        type: "action",
+        action: "theme",
     },
     {
         title: "Login",
-        icon: (
-            <IconLogin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-        ),
-        href: "#",
+        icon: <IconLogin />,
+        type: "route",
+        href: "/staff/login",
     },
 ];
 export const SidebarMenu = [
