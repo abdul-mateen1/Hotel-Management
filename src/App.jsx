@@ -7,7 +7,7 @@ import HomePage from '@/components/public/HomePage';
 import Login from '@/components/public/Login';
 
 import DashboardLayout from './layout/DashboardLayout';
-
+import MainPage from "@/components/private/MainPage";
 const ProtectedRoute = () => {
   const token = localStorage.getItem("token");
   return token ? <Outlet /> : <Navigate to="/staff/login" replace />;
@@ -26,7 +26,7 @@ export default function App() {
 
         <Route element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<DashboardLayout />}>
-            {/* <Route path="/" element={<HomePage />} /> */}
+            
           </Route>
         </Route>
 
