@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { loginUser } from '@/services/authService';
 
 export default function SignupFormDemo() {
@@ -16,6 +17,7 @@ export default function SignupFormDemo() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const credentials = {
     email: email,
@@ -26,10 +28,12 @@ export default function SignupFormDemo() {
     e.preventDefault();
     setError('');
     try {
-      const data = await loginUser(credentials);
+      const data = (await loginUser(credentials)).data;
+      console.log(data);
       localStorage.setItem("token", data.token);
       localStorage.setItem("role", data.roleId);
 
+      navigate('/dashboard');
     }
     catch (error) {
 
