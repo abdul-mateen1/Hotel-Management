@@ -8,6 +8,9 @@ import Login from '@/components/public/Login';
 
 import DashboardLayout from './layout/DashboardLayout';
 import MainPage from "@/components/private/MainPage";
+import { AuthProvider } from './context/AuthContext';
+
+
 const ProtectedRoute = () => {
   const token = localStorage.getItem("token");
   return token ? <Outlet /> : <Navigate to="/staff/login" replace />;
@@ -15,25 +18,27 @@ const ProtectedRoute = () => {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
 
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<HomePage />} />
-        </Route>
-
-        <Route path="/staff/login" element={<Login />} />
-
-        <Route element={<ProtectedRoute />}>
-          <Route path="/dashboard" element={<DashboardLayout />}>
-            
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<HomePage />} />
           </Route>
-        </Route>
 
-        <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/staff/login" element={<Login />} />
 
-      </Routes>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/dashboard" element={<DashboardLayout />}>
 
-    </BrowserRouter>
+            </Route>
+          </Route>
+
+          <Route path="*" element={<Navigate to="/" replace />} />
+
+        </Routes>
+
+      </BrowserRouter>
+    </AuthProvider>
   )
 }

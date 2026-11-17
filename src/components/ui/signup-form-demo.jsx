@@ -5,7 +5,8 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '@/services/authService';
+import { loginUser, myAccess } from '@/services/authService';
+import {useAuth} from "@/context/AuthContext";
 
 export default function SignupFormDemo() {
   const handleSubmit = (e) => {
@@ -13,6 +14,7 @@ export default function SignupFormDemo() {
     console.log("Form submitted");
   };
 
+  const { setAccess } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -33,6 +35,8 @@ export default function SignupFormDemo() {
       localStorage.setItem("token", data.token);
       localStorage.setItem("role", data.roleId);
 
+      const accessResponse = await myAccess("Auth/my-access");
+      setAccess(accessResponse.data);
       navigate('/dashboard');
     }
     catch (error) {

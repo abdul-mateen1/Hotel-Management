@@ -18,17 +18,17 @@ export const slideData = [
     {
       title: "Single Room",
       // button: "Explore Component",
-      src: "https://hotels.his-j.com/image/hotel/MUC/MUC00469-03.jpg?utm_source=chatgpt.com",
+      src: "src\\assets\\singleBed.jpg",
     },
     {
       title: "Double Room",
       // button: "Explore Component",
-      src: "https://www.hotelperk.cz/r/102/76694/obsah/pokoje/perk-superior-plus/superior_1.jpg?utm_source=chatgpt.com",
+      src: "src\\assets\\doubleBed.webp",
     },
     {
       title: "Executive Room",
       // button: "Explore Component",
-      src: "https://secure.s.forbestravelguide.com/img/properties/the-ritz-carlton-tokyo/extra-large/0Property-TheRitzCarltonTokyo-Hotel-GuestroomSuite-ExecutiveSuite-TheRitzCarltonHotelCompanyLLC.jpg?utm_source=chatgpt.com",
+      src: "src\\assets\\executiveRoom.jpg",
     },
     
   ];

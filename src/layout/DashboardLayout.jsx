@@ -2,8 +2,20 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import AppSidebar from "@/components/common/AppSidebar";
 import NavbarDemo from "@/components/private/NavbarDemo";
+import {myAccess} from '../services/authService';
+import { useAuth } from "@/context/AuthContext";
 
 export default function DashboardLayout() {
+    const { loading } = useAuth();
+
+    if (loading) {
+        return (
+            <div className="h-screen flex items-center justify-center bg-neutral-900 text-white">
+                Loading dashboard...
+            </div>
+        );
+    }
+
     return (
         <div className="flex h-screen bg-neutral-900">
 
