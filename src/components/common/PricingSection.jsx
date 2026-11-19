@@ -1,6 +1,12 @@
+import {useNavigate} from 'react-router-dom';
+
 export default function PricingSection() {
+    const navigate = useNavigate();
     const handleSingleRoom = () => {
 
+    }
+    const handleBooking = () =>{
+        navigate("/form");
     }
     return (
         <section id="pricing" className="w-full text-gray-400 bg-gray-900 body-font overflow-hidden">
@@ -46,7 +52,7 @@ export default function PricingSection() {
                                     </svg>
                                 </span>Private Bathroom
                             </p>
-                            <button className="flex items-center mt-auto text-white bg-orange-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-400 rounded">Book Now
+                            <button onClick={handleBooking} className="flex items-center mt-auto text-white bg-orange-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-400 rounded">Book Now
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -96,7 +102,7 @@ export default function PricingSection() {
                                     </svg>
                                 </span>Wardrobe
                             </p>
-                            <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Book Now
+                            <button onClick={handleBooking} className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Book Now
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -146,7 +152,7 @@ export default function PricingSection() {
                                     </svg>
                                 </span>Premium Bathroom Amenities
                             </p>
-                            <button className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Book Now
+                            <button onClick={handleBooking} className="flex items-center mt-auto text-white bg-gray-800 border-0 py-2 px-4 w-full focus:outline-none hover:bg-orange-500 rounded">Book Now
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-auto" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
